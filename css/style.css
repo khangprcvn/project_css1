@@ -45,3 +45,65 @@ body {
 .logo {
   height: 30px;
 }
+
+.heading-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-text {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.heading-primary {
+  display: block;
+  font-size: 60px;
+  letter-spacing: 35px;
+  font-weight: 400;
+  animation: moveInLeft 1s ease-out;
+}
+
+.heading-secondary {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 15px;
+  font-weight: 700;
+  animation: moveInRight 1s ease-out;
+}
